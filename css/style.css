@@ -102,9 +102,9 @@ nav a {
 
 nav a:hover {
     color: #ffcc00;
-    /* ✅ Hover effect: change text color */
+    /*  Hover effect: change text color */
     text-decoration: underline;
-    /* ✅ Hover effect: underline */
+    /* Hover effect: underline */
     background-color: #444;
     /* Optional: subtle hover background */
 }
@@ -114,7 +114,7 @@ nav a:hover {
 
 .hero {
     background-color: #4a90e2;
-    /* ✅ Prominent background color */
+    /* Prominent background color */
     color: white;
     /* White text for contrast */
     text-align: center;
@@ -183,16 +183,16 @@ nav a:hover {
 .explore .btn {
     display: inline-block;
     padding: 12px 24px;
-    /* ✅ Padding for clickable area */
+    /*  Padding for clickable area */
     background-color: #4a90e2;
-    /* ✅ Background color */
+    /* Background color */
     color: #fff;
-    /* ✅ Contrasting text color */
+    /* Contrasting text color */
     border-radius: 8px;
-    /* ✅ Rounded corners */
+    /*  Rounded corners */
     font-weight: bold;
     text-decoration: none;
-    /* ✅ Remove underline */
+    /*  Remove underline */
     transition: all 0.3s ease;
     /* Smooth hover animation */
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
@@ -201,11 +201,11 @@ nav a:hover {
 
 .explore .btn:hover {
     background-color: #357ab8;
-    /* ✅ Hover effect: darker shade */
+    /* Hover effect: darker shade */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    /* ✅ Hover effect: stronger shadow */
+    /* Hover effect: stronger shadow */
     transform: translateY(-2px);
-    /* ✅ Hover effect: slight lift */
+    /* Hover effect: slight lift */
     cursor: pointer;
 }
 
@@ -255,15 +255,15 @@ nav a:hover {
 .student-card {
     width: 250px;
     border: 1px solid #ddd;
-    /* ✅ Border */
+    /* Border */
     border-radius: 8px;
     padding: 15px;
-    /* ✅ Padding */
+    /* Padding */
     text-align: center;
-    /* ✅ Center text */
+    /* Center text */
     background-color: #fff;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    /* ✅ Box-shadow */
+    /* Box-shadow */
     margin: 15px auto;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
     /* For hover */
@@ -271,14 +271,14 @@ nav a:hover {
 
 .student-card:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    /* ✅ Hover effect: stronger shadow */
+    /* Hover effect: stronger shadow */
     transform: translateY(-3px);
     /* Optional: slight lift */
 }
 
 .student-card img {
     max-width: 100%;
-    /* ✅ Image max-width */
+    /*Image max-width */
     height: auto;
     border-radius: 6px;
     margin-bottom: 10px;
@@ -294,11 +294,11 @@ nav a:hover {
 
 .students-grid {
     display: grid;
-    /* ✅ Apply grid */
+    /* Apply grid */
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    /* ✅ Responsive columns */
+    /* Responsive columns */
     gap: 20px;
-    /* ✅ Space between cards */
+    /* Space between cards */
     padding: 20px;
 }
 
@@ -307,10 +307,10 @@ nav a:hover {
 
 .students-grid {
     display: grid;
-    /* ✅ Apply grid */
+    /*  Apply grid */
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    /* ✅ Responsive columns */
+    /* Responsive columns */
     gap: 20px;
-    /* ✅ Space between cards */
+    /*  Space between cards */
     padding: 20px;
 }
