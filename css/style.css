@@ -1,0 +1,60 @@
+/* css/style.css */
+
+body {
+    font-family: sans-serif;
+    background-color: #f8f9fa;
+    /* Optional, to visually confirm */
+}
+
+footer {
+    background-color: #222;
+    /* Dark background */
+    color: white;
+    /* White text */
+    text-align: center;
+    /* Centered text */
+    padding: 15px 0;
+    /* Padding top and bottom */
+    margin-top: 20px;
+    /* Space above footer */
+}
+
+
+/* Navigation Bar */
+
+nav {
+    background-color: #333;
+    /* Dark background */
+    padding: 10px 0;
+    /* Spacing inside nav */
+}
+
+nav ul {
+    list-style-type: none;
+    /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    /* Horizontal layout */
+    justify-content: center;
+    /* Center links */
+}
+
+nav li {
+    margin: 0 15px;
+    /* Space between links */
+}
+
+nav a {
+    text-decoration: none;
+    /* Remove underline */
+    color: white;
+    /* White text */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #f8f9fa;
+    /* Light color on hover */
+}
