@@ -21,31 +21,48 @@
         </ul>
     </nav>
 
-
     <h1>Meet the Students</h1>
 
-    <div class="students-grid">
-        <div class="student-card">
-            <img src="images/placeholder.jpg" alt="Student Name">
-            <h3>Student Name</h3>
-            <a href="students/student-name.html">View Profile</a>
-        </div>
-
-        <div class="student-card">
-            <img src="images/placeholder.jpg" alt="Student Name">
-            <h3>Student Name</h3>
-            <a href="students/student-name.html">View Profile</a>
-        </div>
-
-        <div class="student-card">
-            <img src="images/placeholder.jpg" alt="Student Name">
-            <h3>Student Name</h3>
-            <a href="students/student-name.html">View Profile</a>
-        </div>
-        <!-- Add more student cards as needed -->
+    <div class="students-grid" id="students-grid">
+        <!-- Student cards will be inserted here by JS -->
     </div>
 
     <p>Welcome to the class directory. Here you will find all the students participating in this class.</p>
+
+    <script>
+        // Student Data
+        const students = [{
+            name: "John Doe",
+            image: "images/placeholder.jpg",
+            profile: "students/john.html"
+        }, {
+            name: "Jane Smith",
+            image: "images/placeholder.jpg",
+            profile: "students/jane.html"
+        }, {
+            name: "Alex Johnson",
+            image: "images/placeholder.jpg",
+            profile: "students/alex.html"
+        }];
+
+        // Target Grid Container
+        const grid = document.getElementById("students-grid");
+
+        // Generate Cards
+        students.forEach(student => {
+            const card = `
+                <div class="student-card">
+                    <img src="${student.image}" alt="${student.name}">
+                    <h3>${student.name}</h3>
+                    <a href="${student.profile}">View Profile</a>
+                </div>
+            `;
+            grid.innerHTML += card;
+        });
+    </script>
+    <footer>
+        <p>© 2025 Web Development Class</p>
+    </footer>
 </body>
 
 </html>
