@@ -1,5 +1,24 @@
 /* css/style.css */
 
+@import url('https://fonts.googleapis.com/css2?family=Playfair:opsz,wght@5..1200,400;5..1200,700&display=swap');
+
+/* Body text (Roboto or system default as fallback) */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+
+/* Elegant serif font for headings */
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair', serif;
+    font-weight: 700;
+    /* bold headings */
+}
+
 
 /* Global Styles */
 
@@ -170,4 +189,75 @@ nav a:hover {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 20px;
     padding: 20px;
+}
+
+
+/* Smooth transition for links */
+
+a {
+    transition: all 0.3s ease;
+}
+
+
+/* Smooth transition for buttons */
+
+.btn {
+    transition: all 0.3s ease;
+}
+
+
+/* Smooth transition for student cards */
+
+.student-card {
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #0d6efd;
+    text-decoration: underline;
+}
+
+.btn:hover {
+    background-color: #0b5ed7;
+    color: white;
+}
+
+.student-card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+}
+
+
+/* Mobile Responsiveness */
+
+@media (max-width: 768px) {
+    /* Stack navbar items vertically */
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    /* Make student grid 1-column */
+    .students-grid {
+        grid-template-columns: 1fr;
+    }
+    /* Adjust font sizes for smaller screens */
+    h1 {
+        font-size: 1.8rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+    }
+    h3 {
+        font-size: 1.2rem;
+    }
+    body {
+        font-size: 16px;
+    }
+    /* Optional: Add padding/margin adjustments */
+    section {
+        padding: 40px 20px;
+    }
 }
