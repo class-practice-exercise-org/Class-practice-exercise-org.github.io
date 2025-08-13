@@ -1,263 +1,366 @@
-/* css/style.css */
+/* Basic Reset & Global Styles */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair:opsz,wght@5..1200,400;5..1200,700&display=swap');
-
-/* Body text (Roboto or system default as fallback) */
-
-body {
-    font-family: 'Roboto', sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-/* Elegant serif font for headings */
-
-h1,
-h2,
-h3 {
-    font-family: 'Playfair', serif;
-    font-weight: 700;
-    /* bold headings */
+.body-homepage {
+    background-image: url('https://northseattle.edu/sites/default/files/stairs-hssr.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
 }
-
-
-/* Global Styles */
 
 body {
     font-family: sans-serif;
-    background-color: #f8f9fa;
-}
-
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    margin-top: 20px;
-}
-
-
-/* Navigation Bar */
-
-nav {
-    background-color: #333;
-    padding: 10px 0;
-}
-
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    /*background-color: #f8f9fa;*/
+    padding: 20px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-nav li {
-    margin: 0 15px;
+
+/* site nav styling */
+
+.site-nav {
+    background: linear-gradient(to right, #2c3e50, #4a6491);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    @media screen and (width < 450px) {
+        padding: .2rem;
+    }
 }
 
-nav a {
+.nav-ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    @media screen and (width>=900px) {
+        font-size: 1.2rem;
+        justify-content: space-around;
+        width: 50%;
+        /* this media query will look balanced if there is a logo on the left or right side. If the nav is off-center, it will read better as one component imho */
+    }
+    @media screen and (width < 450px) {
+        font-size: .6rem;
+        justify-content: space-evenly;
+    }
+}
+
+.nav-li {
+    list-style: None;
+}
+
+.nav-a {
+    /* color: aliceblue; */
+    /* a suggestion^ if anybody doesn't like the yellow */
+    color: lemonchiffon;
     text-decoration: none;
-    color: white;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 5px 10px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 8px 15px;
     border-radius: 4px;
     transition: all 0.3s ease;
-}
-
-nav a:hover {
-    color: #ffcc00;
-    text-decoration: underline;
-    background-color: #444;
 }
 
 
 /* Hero Section */
 
 .hero {
-    background-color: #4a90e2;
-    color: white;
+    /* if you have an image, swap out the color below for a background-image:
+       background: url("../images/hero-bg.jpg") center/cover no-repeat; */
+    background-color: #2a9d8f;
+    color: #fff;
+    /* center content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* give it some space */
+    padding: 40px 20px;
     text-align: center;
-    padding: 80px 20px;
+    margin-bottom: 50px;
+    margin-top: 80px;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+.hero-heading {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
 }
 
-.hero p {
-    font-size: 1.5rem;
-    margin-top: 0;
+.hero-subheading {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.nav-a:hover {
+    color: pink;
+}
+
+.nav-a:active {
+    color: hotpink;
 }
 
 
-/* Explore Section */
+/* Student Card CSS */
 
-.explore {
-    text-align: center;
-    padding: 60px 20px;
+div.studentcard {
+    border: 1px solid #000000;
+    padding: 10px;
+    box-shadow: 0 2px 4px #333333;
+    flex: 1 1 30%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+div.studentcard:hover {
+    box-shadow: 0 4px 8px #333333;
+    transition: box-shadow 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+img.studentcardimg {
+    border: 1px solid #000000;
+    max-width: 100%;
+    height: 100px;
+}
+
+div.studentcardcontainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    justify-content: center;
+    gap: 10px;
+}
+
+div.studentwrap {
+    display: flex;
+    flex-direction: column;
+}
+
+a:link.student {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+a:visited.student {
+    color: #777777;
+    text-decoration: none;
+}
+
+a:hover.student {
+    color: #2c3e50;
+    text-decoration: underline;
+}
+
+a:active.student {
+    color: #2c3e50;
+    text-decoration: underline;
+}
+
+
+/* Student Template */
+
+#student-body {
+    color: #333;
     background-color: #f4f4f4;
 }
 
-.explore h2 {
-    font-size: 2rem;
+.student-section {
+    padding: 20px;
+    margin: 20px;
+    border-radius: 8px;
+    background-color: #ffffff;
+}
+
+#bio {
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+#bio h2 {
     margin-bottom: 10px;
 }
 
-.explore p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
-    color: #333;
+#projects {
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+#projects ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#projects li {
+    padding: 5px;
+    margin: 5px;
+    display: inline-block;
 }
 
 
-/* Unified Button Styles */
+/* Student Template END */
 
-.explore .btn {
+
+/* Header Styles */
+
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+
+/* Main Styles */
+
+main {
+    flex: 1;
+    padding: 40px 20px;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+
+/* Footer Styles */
+
+footer {
+    color: black;
+    text-align: center;
+    padding: 0.4rem;
+    margin-top: auto;
+    /* Keep on bottom */
+    /*border-top: 1px solid #eee;*/
+}
+
+
+/* Button container styles */
+
+.cta-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+
+/* Base button styles */
+
+.cta-button {
+    /* Box model */
     display: inline-block;
     padding: 12px 24px;
-    background-color: #4a90e2;
-    color: #fff;
+    min-width: 150px;
+    /* Borders & background */
+    border: 2px solid;
     border-radius: 8px;
+    /* Typography */
+    color: white !important;
+    text-decoration: none !important;
     font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-    margin: 5px;
-}
-
-.explore .btn:hover {
-    background-color: #357ab8;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    transform: translateY(-2px);
-    cursor: pointer;
-}
-
-
-/* Student Card */
-
-.student-card {
-    width: 250px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 15px;
     text-align: center;
-    background-color: #fff;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    margin: 15px auto;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-}
-
-.student-card:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    transform: translateY(-3px);
-}
-
-.student-card img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 6px;
-    margin-bottom: 10px;
-}
-
-.student-card h3 {
-    margin: 10px 0;
-    font-size: 1.2rem;
-}
-
-.student-card a {
-    display: inline-block;
-    margin-top: 8px;
-    text-decoration: none;
-    color: #4a90e2;
-    font-weight: bold;
-    transition: color 0.3s ease;
-}
-
-.student-card a:hover {
-    color: #357ab8;
-    text-decoration: underline;
-}
-
-
-/* Students Grid */
-
-.students-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
-
-
-/* Smooth transition for links */
-
-a {
+    font-size: 1.1rem;
+    /* Effects */
+    cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 
-/* Smooth transition for buttons */
+/* Primary button - Deep blue */
 
-.btn {
-    transition: all 0.3s ease;
+.cta-button.primary {
+    background-color: #2c3e50;
+    /* Dark blue */
+    border-color: #1a2530;
 }
 
 
-/* Smooth transition for student cards */
+/* Secondary button - Medium gray */
 
-.student-card {
-    transition: all 0.3s ease;
-}
-
-a:hover {
-    color: #0d6efd;
-    text-decoration: underline;
-}
-
-.btn:hover {
-    background-color: #0b5ed7;
-    color: white;
-}
-
-.student-card:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transform: translateY(-4px);
+.cta-button.secondary {
+    background-color: #7f8c8d;
+    /* Gray */
+    border-color: #6c7a89;
 }
 
 
-/* Mobile Responsiveness */
+/* Accent button - Seattle College green */
 
-@media (max-width: 768px) {
-    /* Stack navbar items vertically */
-    nav ul {
+.cta-button.accent {
+    background-color: #4b7b2f;
+    /* College green */
+    border-color: #3a6025;
+}
+
+
+/* Hover effects */
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button.primary:hover {
+    background-color: #1a2530;
+}
+
+.cta-button.secondary:hover {
+    background-color: #6c7a89;
+}
+
+.cta-button.accent:hover {
+    background-color: #3a6025;
+}
+
+
+/* Active state */
+
+.cta-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Focus state for accessibility */
+
+.cta-button:focus {
+    outline: 2px solid #f1c40f;
+    outline-offset: 2px;
+}
+
+
+/* Mobile responsive styles */
+
+@media (max-width: 600px) {
+    .cta-container {
         flex-direction: column;
         align-items: center;
     }
-    nav ul li {
-        margin: 10px 0;
-    }
-    /* Make student grid 1-column */
-    .students-grid {
-        grid-template-columns: 1fr;
-    }
-    /* Adjust font sizes for smaller screens */
-    h1 {
-        font-size: 1.8rem;
-    }
-    h2 {
-        font-size: 1.5rem;
-    }
-    h3 {
-        font-size: 1.2rem;
-    }
-    body {
-        font-size: 16px;
-    }
-    /* Optional: Add padding/margin adjustments */
-    section {
-        padding: 40px 20px;
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
     }
 }
